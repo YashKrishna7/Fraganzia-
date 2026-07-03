@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragranzia - Autograph Eau De Parfum 100ml For Men</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary-teal: #004d61;
+            --dark-teal: #003644;
+            --accent-gold: #b89244;
+            --text-dark: #2d3748;
+            --footer-teal: #82afb9;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+
+         /* Navbar Styling */
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-teal) !important;
+            font-size: 24px;
+        }
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: #555 !important;
+        }
+        .nav-link.active {
+            color: var(--primary-teal) !important;
+            font-weight: 600;
+        }
+        .search-input {
+            border-radius: 20px;
+            background-color: #f1f3f5;
+            border: none;
+            font-size: 13px;
+            padding-left: 35px;
+        }
+        .search-box {
+            position: relative;
+        }
+        .search-box i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 13px;
+        }
+
+
+        /* Breadcrumb */
+        .breadcrumb-custom {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 25px;
+        }
+
+        /* Gallery Layout */
+        .thumb-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .thumb-item {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 4px;
+            cursor: pointer;
+            object-fit: contain;
+            background: #fff;
+        }
+        .thumb-item.active, .thumb-item:hover {
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 0 1px var(--primary-teal);
+        }
+        .main-img-container {
+            border: 1px solid #f0f2f5;
+            border-radius: 8px;
+            padding: 30px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .main-product-img {
+            max-height: 400px;
+            width: auto;
+            object-fit: contain;
+        }
+        .floating-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .action-circle-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+        .action-circle-btn:hover {
+            color: var(--primary-teal);
+            background-color: #f8fafb;
+        }
+
+        /* Action Buttons */
+        .btn-purchase-now {
+            background-color: var(--primary-teal);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        .btn-purchase-now:hover {
+            background-color: var(--dark-teal);
+        }
+        .btn-add-to-cart-outline {
+            background-color: transparent;
+            color: var(--primary-teal);
+            border: 1px solid var(--primary-teal);
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+        .btn-add-to-cart-outline:hover {
+            background-color: #f4f8f9;
+        }
+
+        /* Product Info Meta */
+        .product-title-main {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 2px;
+        }
+        .brand-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .rating-box {
+            font-size: 13px;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 8px;
+        }
+        .text-stock-alert {
+            color: #e53e3e;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .price-large {
+            font-size: 26px;
+            font-weight: 700;
+            color: #000;
+        }
+        .price-strike-small {
+            font-size: 14px;
+            color: #aaa;
+            text-decoration: line-through;
+        }
+        .discount-pct {
+            font-size: 14px;
+            color: #38a169;
+            font-weight: 700;
+        }
+
+        /* Quantity Counter Selector */
+        .quantity-selector {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #111;
+            border-radius: 2px;
+            margin-bottom: 25px;
+        }
+        .qty-btn {
+            background: none;
+            border: none;
+            padding: 4px 14px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .qty-input {
+            width: 35px;
+            text-align: center;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            background: transparent;
+        }
+
+        /* Meta Section Headers */
+        .meta-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: #000;
+        }
+        .meta-body-text {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Offers List Items */
+        .offers-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .offers-list li {
+            font-size: 12px;
+            color: #333;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .offers-list li::before {
+            content: "•";
+            color: #38a169;
+            font-size: 18px;
+            position: absolute;
+            left: 5px;
+            top: -3px;
+        }
+
+        /* Suggested Products Section Styles */
+    
+
+        :root{
+        --primary-teal:#0c4a5e;
+        --primary-teal-dark:#0b3a49;
+        --price-color:#0b3a49;
+        --old-price-color:#a9b4b7;
+        --card-border:#eceff0;
+        --card-radius:16px;
+        --line:#e7ebec;
+        --dark-teal: #003644;
+        --accent-gold: #b89244;
+        --text-dark: #2d3748;
+        --footer-teal: #82afb9;
+        }
+        body{
+         font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--text-dark);
+        background-color: #ffffff;
+        }
+        .text-teal{ color:var(--primary-teal); }
+        .section-wrap{
+        max-width:1200px;
+        margin:0 auto;
+        padding:3rem 1.25rem;
+        }
+
+        /* ---- product card ---- */
+        .card-perfume{
+        background:#fff;
+        border:1px solid var(--card-border);
+        border-radius:var(--card-radius);
+        padding:1rem;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        transition:box-shadow .3s ease, transform .3s ease;
+        }
+        .card-perfume:hover{
+        box-shadow:0 14px 30px rgba(11,58,73,.10);
+        transform:translateY(-4px);
+        }
+
+        
+        .product-img-wrapper {
+        background-color: #fafafa;
+        border-radius: 0px 30px 0px 30px;
+        padding: 20px 10px;
+        margin-bottom: 15px;
+        position: relative;
+        height: 180px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        }
+
+        .product-img {
+        max-height: 140px;
+        max-width: 100%;
+        object-fit: contain; 
+        transition: transform 0.3s ease;
+        }
+
+    
+        .card-perfume:hover .product-img {
+        transform: scale(1.08);
+        }
+
+    
+        .fallback-box {
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+        border-radius:8px;
+        }
+        .card-perfume:hover .fallback-box {
+        transform: scale(1.05);
+        }
+
+        
+        .product-title{
+        font-size:.9rem;
+        font-weight:500;
+        line-height:1.35;
+        min-height:2.6em;
+        margin-bottom:.6rem;
+        color:#1c2b30;
+        }
+        .price-box{
+        margin-bottom:.85rem;
+        display:flex;
+        align-items:baseline;
+        gap:.5rem;
+        }
+        .price-now{
+        font-weight:700;
+        font-size:1rem;
+        color:var(--price-color);
+        }
+        .price-old{
+        font-size:.8rem;
+        color:var(--old-price-color);
+        text-decoration:line-through;
+        }
+
+        
+        .btn-cart{
+        background-color:var(--primary-teal-dark);
+        color:#fff;
+        border:none;
+        border-radius:8px;
+        padding:.55rem 1rem;
+        font-size:.85rem;
+        font-weight:500;
+        width:100%;
+        margin-top:auto;
+        transition:background-color .2s ease;
+        }
+        .btn-cart:hover{
+        background-color:var(--primary-teal);
+        color:#fff;
+        }
+
+    
+        h4.section-heading{
+        font-family:'Playfair Display', serif;
+        font-size:1.5rem;
+        }
+
+        
+        .carousel-item {
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        padding-bottom:.25rem; 
+        }
+
+        
+        .carousel-nav-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        background: white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: var(--primary-teal);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .carousel-nav-btn:hover {
+        background-color: var(--primary-teal);
+        color: white;
+        border-color: var(--primary-teal);
+        }
+
+        
+        .carousel-indicators-custom{
+        display:flex;
+        justify-content:center;
+        gap:6px;
+        margin-top:1.5rem;
+        }
+        .carousel-indicators-custom button{
+        width:7px;height:7px;
+        border-radius:50%;
+        border:none;
+        background:#d7dee0;
+        padding:0;
+        transition:background .2s ease, width .2s ease;
+        }
+        .carousel-indicators-custom button.active{
+        background:var(--primary-teal-dark);
+        width:20px;
+        border-radius:4px;
+        
+        }
+
+        /* Footer Layout elements */
+        footer {
+            background-color: var(--footer-teal);
+            color: #1e3b42;
+            font-size: 13px;
+        
+        }
+        footer h6 {
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 15px;
+            color: #0c252a;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        footer ul li {
+            margin-bottom: 8px;
+        }
+        footer ul li a {
+            color: #2d525b;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .social-icons a {
+            color: #1e3b42;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+        .footer-brand {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0c252a;
+        }
+        .bottom-bar {
+            border-top: 1px solid rgba(0,0,0,0.08);
+            font-size: 11px;
+            color: #446871;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Fragranzia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gifting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-box d-none d-md-block">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="form-control search-input" type="search" placeholder="Search here" style="width: 210px;">
+                    </div>
+                    <a href="cart.html" class="text-dark"><i class="fa-solid fa-basket-shopping"></i></a>
+                    <a href="#" class="text-dark"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#" class="text-dark"><i class="fa-regular fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Container -->
+    <div class="container my-4">
+        
+        <!-- Breadcrumbs Layout Info -->
+        <div class="breadcrumb-custom">
+            Home &gt; Products &gt; Autograph eau de parfum 100ml for men
+        </div>
+
+        <!-- Upper Showcase Product Panel split info -->
+        <div class="row g-4 mb-5">
+            
+            <!-- Left Side Column: Vertical Thumbnails alongside Main Image Viewport component -->
+            <div class="col-lg-6">
+                <div class="row g-2">
+                    <div class="col-2 col-md-2">
+                        <div class="thumb-gallery">
+                            <img src="images/d1.png" class="thumb-item active" alt="View 1">
+                            <img src="images/d2.png" class="thumb-item" alt="View 2">
+                            <img src="images/d3.png" class="thumb-item" alt="View 3">
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-10">
+                        <div class="main-img-container">
+                            <img src="images/d4.png" id="viewportProductImg" class="main-product-img" alt="Autograph Perfume Main View">
+                            
+                            <!-- Heart / Share controls layout indicators overlaying primary viewport space -->
+                            <div class="floating-actions">
+                                <span class="action-circle-btn"><i class="fa-regular fa-heart"></i></span>
+                                <span class="action-circle-btn"><i class="fa-solid fa-share-nodes"></i></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Primary Purchase / Add to Cart triggers -->
+                        <a href="payment.html"><button class="btn btn-purchase-now">Purchase Now</button></a>
+                        <button class="btn btn-add-to-cart-outline">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Column: Meta Pricing details, Inventory state data fields, Descriptions -->
+            <div class="col-lg-6 ps-lg-5">
+                <h1 class="product-title-main">Autograph eau de parfum 100ml for men</h1>
+                <div class="brand-subtitle">Autograph</div>
+                
+                <div class="rating-box">
+                    <strong>4.5</strong> <i class="fa-solid fa-star text-warning small"></i> 
+                    <span class="text-muted ms-1">| 1,000 Ratings</span>
+                </div>
+                <div class="text-stock-alert">Hurry only few stocks left!</div>
+
+                <!-- Live Price metrics wrapper -->
+                <div class="price-row">
+                    <span class="price-large">Rs 899</span>
+                    <span class="price-strike-small">Rs 2000</span>
+                    <span class="discount-pct">51% off</span>
+                </div>
+
+                <!-- Product Quantity Counter Box Selector -->
+                <div class="quantity-selector">
+                    <button class="qty-btn" onclick="let input = this.nextElementSibling; if(input.value > 1) input.value--">-</button>
+                    <input type="text" class="qty-input" value="1" readonly>
+                    <button class="qty-btn" onclick="this.previousElementSibling.value++">+</button>
+                </div>
+
+                <!-- Delivery Metrics parameters -->
+                <div class="meta-section-title">Delivery</div>
+                <div class="meta-body-text">
+                    Delivery by 28 Aug, Wednesday | Free<br>
+                    <span class="text-muted text-xs">If ordered before 5:24 PM</span>
+                </div>
+
+                <!-- Textual Description Box info -->
+                <div class="meta-section-title">Description</div>
+                <div class="meta-body-text">
+                    This fragrance exudes a confident and enigmatic personality. Its composition features a top note of lemon and mandarin with a twist of apple that enhances the freshness. The heart reveals a warm blend of high-grade lavender and a hint of cinnamon, beautifully wrapped in patchouli, musk, and vanilla to ensure a powerful and flowing scent.
+                </div>
+
+                <!-- Promotional Campaign Bullet metrics -->
+                <div class="meta-section-title">Available Offers</div>
+                <ul class="offers-list">
+                    <li>Buy two of the same product and get a third one free.</li>
+                    <li>Enjoy free standard shipping on orders exceeding RS 399.</li>
+                    <li>Get 15% off your first order.</li>
+                    <li>Receive a free tool case with the purchase of any perfume over RS 2,000.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Suggested Contents -->
+        <div class="section-wrap">
+
+            <!-- Featured Collections Section with Slider -->
+            <div class="mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="fw-bold m-0 section-heading text-teal">Suggested <span class="text-dark fw-normal">for you</span></h4>
+                <!-- slide controller button -->
+                <div>
+                    <button class="carousel-nav-btn me-1" type="button" data-bs-target="#featuredCollectionCarousel" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav-btn" type="button" data-bs-target="#featuredCollectionCarousel" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                </div>
+
+                <!-- Bootstrap Carousel Slider -->
+                <div id="featuredCollectionCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+
+                    <!-- slide 1 -->
+                    <div class="carousel-item active">
+                    <div class="row row-cols-2 row-cols-md-4 g-4">
+
+                        <!-- product 1 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/dd6.png" alt="Autograph" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #e05252; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Autograph Eau De Parfum 100ml <br> For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 650</span>
+                            <span class="price-old">RS 1450</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                        <!-- product 2 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/dd7.png" alt="Kyros" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #2c3e50; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Kyros Eau De Parfum 100ml <br>For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 899</span>
+                            <span class="price-old">RS 2100</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                        <!-- product 3 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/dd8.png" alt="Autograph" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #8e44ad; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Autograph Eau De Parfum 100ml <br>For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 999</span>
+                            <span class="price-old">RS 2241</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                        <!-- product 4 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/Product4.png" alt="Royal" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #2980b9; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Royal Eau De Parfum 100ml <br>For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 550</span>
+                            <span class="price-old">RS 1100</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                    </div>
+                    </div>
+
+                    <!-- slide 2 -->
+                    <div class="carousel-item">
+                    <div class="row row-cols-2 row-cols-md-4 g-4">
+
+                        <!-- product 5 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/Product5.png" alt="Velvet Scent" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #27ae60; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Royal Eau De Parfume 100ml <br>For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 750</span>
+                            <span class="price-old">RS 1600</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                        <!-- product 6 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/Product6.png" alt="Midnight Oud" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #34495e; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Midnight Oud Eau De Parfum 100ml <br>For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 820</span>
+                            <span class="price-old">RS 1750</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                        <!-- product 7 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/Product7.png" alt="Citrus Bloom" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #e67e22; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Citrus Bloom Eau De Parfum 100ml <br>For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 699</span>
+                            <span class="price-old">RS 1350</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                        <!-- product 8 -->
+                        <div class="col">
+                        <div class="card-perfume">
+                            <div class="product-img-wrapper">
+                            <img src="images/Product8.png" alt="Golden Amber" class="img-fluid product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-box" style="display:none; height: 130px; background: #c99a24; width: 80px; margin: 0 auto;"></div>
+                            </div>
+                            <div class="product-title">Golden Amber Eau De Parfum 100ml <br>For Men</div>
+                            <div class="price-box">
+                            <span class="price-now">RS 1099</span>
+                            <span class="price-old">RS 2400</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                        </div>
+
+                    </div>
+                    </div>
+
+                </div>
+
+                <!-- Slide position indicator dots -->
+                <div class="carousel-indicators-custom">
+                    <button type="button" data-bs-target="#featuredCollectionCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#featuredCollectionCarousel" data-bs-slide-to="1"></button>
+                </div>
+                </div>
+            </div>
+
+            </div>
+
+    <!-- Layout Footer -->
+    <footer class="pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <span class="footer-brand d-block mb-3">Fragranzia</span>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Pages</h6>
+                    <ul>
+                        <li><a href="#" class="text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-decoration-none">Products</a></li>
+                        <li><a href="#" class="text-decoration-none">Gifting</a></li>
+                        <li><a href="#" class="text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-decoration-none">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Quick Links</h6>
+                    <ul>
+                        <li><a href="#" class="text-decoration-none">Privacy policy</a></li>
+                        <li><a href="#" class="text-decoration-none">Terms and conditions</a></li>
+                        <li><a href="#" class="text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-decoration-none">Customer service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2 text-muted"><i class="fa-regular fa-envelope me-2"></i> fragranzia@gmail.com</div>
+                    <div class="mb-3 text-muted"><i class="fa-solid fa-phone me-2"></i> +919074543210</div>
+                    <h6>Social Media</h6>
+                    <div class="social-icons">
+                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-bar pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <div class="d-flex gap-3 flex-wrap justify-content-center">
+                    <a href="#" class="text-decoration-none text-muted">Web Accessibility</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of use</a>
+                    <a href="#" class="text-decoration-none text-muted">Privacy Statement</a>
+                    <a href="#" class="text-decoration-none text-muted">Contact Us</a>
+                </div>
+                <div class="text-muted">
+                    © 2026 Fragranzia Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

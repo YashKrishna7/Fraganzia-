@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragranzia - Edit Profile</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-teal: #004d61;
+            --brand-teal-dark: #003442;
+            --footer-bg: #82afb9;
+            --footer-text-dark: #0c252a;
+            --footer-link: #2d525b;
+            --border-color: #e2e8f0;
+            --text-dark: #1a202c;
+            --text-muted: #718096;
+            --input-bg: #e9ecef;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-wrapper {
+            flex: 1 0 auto;
+        }
+
+        /* Navbar Layout */
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--brand-teal) !important;
+            font-size: 24px;
+        }
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: #4a5568 !important;
+        }
+        .search-container {
+            position: relative;
+            width: 220px;
+        }
+        .search-container input {
+            border-radius: 20px;
+            background-color: #f1f3f5;
+            border: none;
+            font-size: 13px;
+            padding: 6px 12px 6px 36px;
+        }
+        .search-container i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8892b0;
+            font-size: 13px;
+        }
+        .nav-icon {
+            color: #2d3748;
+            font-size: 16px;
+        }
+        .profile-icon-active {
+            background-color: var(--brand-teal);
+            color: white !important;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        /* Profile Title Header */
+        .profile-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 2px;
+        }
+        .breadcrumb-sub {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        /* Navigation Segments Bar */
+        .profile-pills {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+        .profile-pill {
+            background-color: transparent;
+            color: #1a202c;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 8px 30px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .profile-pill.active {
+            background-color: var(--brand-teal);
+            color: #ffffff;
+            border-color: var(--brand-teal);
+            font-weight: 600;
+        }
+
+        /* Forms Layout Fields */
+        .form-label-custom {
+            font-size: 11px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        .form-control-custom {
+            background-color: var(--input-bg) !important;
+            border: none !important;
+            border-radius: 4px !important;
+            font-size: 12px;
+            color: #4a5568 !important;
+            padding: 10px 14px;
+            height: 40px;
+        }
+        .form-control-custom:focus {
+            box-shadow: none;
+        }
+        .password-wrapper {
+            position: relative;
+        }
+        .password-toggle-icon {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #718096;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        /* Edit Button Style */
+        .btn-edit-profile {
+            background: transparent;
+            color: #111111;
+            border: 1px solid #111111;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 36px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .btn-edit-profile:hover {
+            background-color: #f8fafc;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <!-- Header / Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="#">Fragranzia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fragranziaNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="fragranziaNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Gifting</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <div class="search-container d-none d-md-block">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input class="form-control" type="search" placeholder="Search here">
+                        </div>
+                        <a href="#" class="nav-icon ms-1"><i class="fa-solid fa-basket-shopping"></i></a>
+                        <a href="#" class="nav-icon"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#" class="nav-icon profile-icon-active"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Workspace Frame -->
+        <div class="container my-5">
+            <h1 class="profile-title">Profile</h1>
+            <div class="breadcrumb-sub">Home > Profile</div>
+
+            <!-- Context navigation pills row selection parameters setup layout template match -->
+            <div class="profile-pills">
+                <a href="profile.html" class="profile-pill active">Profile</a>
+                <a href="address.html" class="profile-pill">Address</a>
+                <a href="orders.html" class="profile-pill">My Orders</a>
+            </div>
+
+            <!-- Profile Parameters Forms Component Workspace -->
+            <form id="profileForm" onsubmit="event.preventDefault();">
+                <div class="row g-4 mb-4">
+                    <!-- Column 1: Full Name -->
+                    <div class="col-md-4">
+                        <label class="form-label form-label-custom">Full Name</label>
+                        <input type="text" class="form-control form-control-custom" value="Thomas">
+                    </div>
+                    <!-- Column 2: Email -->
+                    <div class="col-md-4">
+                        <label class="form-label form-label-custom">Email</label>
+                        <input type="email" class="form-control form-control-custom" value="thomas12@gmail.com">
+                    </div>
+                    <!-- Column 3: Phone Number -->
+                    <div class="col-md-4">
+                        <label class="form-label form-label-custom">Phone Number</label>
+                        <input type="text" class="form-control form-control-custom" value="+91 98765 43210">
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <!-- Column 1: Date of Birth -->
+                    <div class="col-md-4">
+                        <label class="form-label form-label-custom">Date of Birth</label>
+                        <input type="text" class="form-control form-control-custom" value="Thomas">
+                    </div>
+                    <!-- Column 2: Gender -->
+                    <div class="col-md-4">
+                        <label class="form-label form-label-custom">Gender</label>
+                        <input type="text" class="form-control form-control-custom" value="Male">
+                    </div>
+                    <!-- Column 3: Password with mask toggle support -->
+                    <div class="col-md-4">
+                        <label class="form-label form-label-custom">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="passwordField" class="form-control form-control-custom" value="hiddensecret">
+                            <i class="fa-regular fa-eye-slash password-toggle-icon" id="togglePasswordIcon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Control Action Trigger Alignments -->
+                <div class="d-flex justify-content-end mt-4 color-blue">
+                    <button class="btn btn-edit-profile">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <!-- Bootstrap 5.3 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+</html>

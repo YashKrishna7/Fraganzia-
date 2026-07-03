@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragranzia - About Us</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-teal: #004d61;
+            --brand-teal-dark: #003442;
+            --footer-bg: #82afb9;
+            --footer-text-dark: #0c252a;
+            --footer-link: #2d525b;
+            --border-color: #e2e8f0;
+            --text-dark: #1a202c;
+            --text-muted: #718096;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-wrapper {
+            flex: 1 0 auto;
+        }
+
+        /* Navbar Layout */
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--brand-teal) !important;
+            font-size: 24px;
+        }
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: #4a5568 !important;
+        }
+        .nav-link.active {
+            color: var(--brand-teal) !important;
+            font-weight: 700;
+        }
+        .search-container {
+            position: relative;
+            width: 220px;
+        }
+        .search-container input {
+            border-radius: 20px;
+            background-color: #f1f3f5;
+            border: none;
+            font-size: 13px;
+            padding: 6px 12px 6px 36px;
+        }
+        .search-container i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8892b0;
+            font-size: 13px;
+        }
+        .nav-icon {
+            color: #2d3748;
+            font-size: 16px;
+        }
+
+        /* About Header Text */
+        .about-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 2px;
+        }
+        .breadcrumb-sub {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+
+        /* Editorial Narrative Block */
+        .narrative-p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #2d3748;
+            margin-bottom: 24px;
+            text-align: justify;
+        }
+
+        /* Dynamic Collage Mosaic Layout Style */
+        .mosaic-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        .mosaic-img-card {
+            width: 100%;
+            max-width: 280px;
+            height: 180px;
+            object-fit: cover;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        /* Replicating the unique rounded corner geometry profiles from the reference image */
+        .img-top-curve {
+            border-radius: 80px 80px 0px 80px;
+        }
+        .img-bottom-curve {
+            border-radius: 0px 80px 80px 80px;
+        }
+
+        /* Full Width Custom Footer */
+        footer {
+            flex-shrink: 0;
+            background-color: var(--footer-bg);
+            color: var(--footer-text-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <!-- Header / Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="#">Fragranzia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fragranziaNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="fragranziaNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Gifting</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                        <div class="search-container d-none d-md-block">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input class="form-control" type="search" placeholder="Search here">
+                        </div>
+                        <a href="cart.html" class="nav-icon ms-1"><i class="fa-solid fa-basket-shopping"></i></a>
+                        <a href="#" class="nav-icon"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#profile.html" class="nav-icon"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Workspace Frame -->
+        <div class="container my-5">
+            <h1 class="about-title">About Fragranzia</h1>
+            <div class="breadcrumb-sub">Home > About</div>
+
+            <div class="row g-5 align-items-center">
+                <!-- Left Column: Story paragraphs -->
+                <div class="col-lg-7">
+                    <p class="narrative-p">
+                        At Fragranzia, we believe that a perfume is more than just a scent—it's a story, an art, and a science combined to create memories that linger. Our journey began with a vision to craft exquisite fragrances that capture the essence of individuality and elevate every moment into something timeless.
+                    </p>
+                    <p class="narrative-p">
+                        Guided by passion and precision, we source the finest ingredients from around the world to create perfumes that resonate with authenticity and luxury. Each bottle is a masterpiece, meticulously crafted to deliver an unparalleled sensory experience.
+                    </p>
+                    <p class="narrative-p">
+                        Our commitment goes beyond creating fragrances. We aim to inspire confidence, evoke emotions, and celebrate uniqueness through every drop we produce. Fragranzia isn't just a brand—it's a celebration of you, your style, and your moments.
+                    </p>
+                    <p class="narrative-p">
+                        With a legacy built on quality, artistry, and innovation, we invite you to explore our collection and find a scent that speaks your story.
+                    </p>
+                </div>
+
+                <!-- Right Column: Abstract profile images matching the picture layout -->
+                <div class="col-lg-5">
+                    <div class="mosaic-wrapper">
+                        <!-- Referencing the parent presentation context template source image layout verbatim -->
+                        <img src="images/2.jpg" alt="Fragranzia Men Application" class="mosaic-img-card img-top-curve">
+                        <img src="images/about.png" alt="Fragranzia Women Application" class="mosaic-img-card img-bottom-curve">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FULL SCREEN WIDTH FOOTER ELEMENT -->
+    <footer class="w-100 pt-5 pb-3">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <span class="navbar-brand d-block mb-3" style="color: var(--footer-text-dark) !important;">Fragranzia</span>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 style="font-weight: 700; font-size: 13px; margin-bottom: 15px; color: var(--footer-text-dark);">Pages</h6>
+                    <ul class="list-unstyled p-0 m-0">
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">Products</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">Gifting</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">About</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 style="font-weight: 700; font-size: 13px; margin-bottom: 15px; color: var(--footer-text-dark);">Quick Links</h6>
+                    <ul class="list-unstyled p-0 m-0">
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">Privacy policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">Terms and conditions</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none" style="color: var(--footer-link); font-size: 12px;">Customer service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2 opacity-75" style="font-size: 13px;"><i class="fa-regular fa-envelope me-2"></i> fragranzia@gmail.com</div>
+                    <div class="mb-3 opacity-75" style="font-size: 13px;"><i class="fa-solid fa-phone me-2"></i> +919074543210</div>
+                    <h6 style="font-weight: 700; font-size: 13px; margin-bottom: 15px; color: var(--footer-text-dark);">Social Media</h6>
+                    <div class="social-icons">
+                        <a href="#" class="text-decoration-none me-3" style="color: var(--footer-text-dark); font-size: 16px;"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-decoration-none me-3" style="color: var(--footer-text-dark); font-size: 16px;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-decoration-none me-3" style="color: var(--footer-text-dark); font-size: 16px;"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="text-decoration-none me-3" style="color: var(--footer-text-dark); font-size: 16px;"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="text-decoration-none" style="color: var(--footer-text-dark); font-size: 16px;"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-bar pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2" style="border-top: 1px solid rgba(0,0,0,0.08); font-size: 11px;">
+                <div class="d-flex gap-3 flex-wrap justify-content-center">
+                    <a href="#" class="text-decoration-none opacity-75" style="color: var(--footer-text-dark);">Web Accessibility</a>
+                    <a href="#" class="text-decoration-none opacity-75" style="color: var(--footer-text-dark);">Terms of use</a>
+                    <a href="#" class="text-decoration-none opacity-75" style="color: var(--footer-text-dark);">Privacy Statement</a>
+                    <a href="#" class="text-decoration-none opacity-75" style="color: var(--footer-text-dark);">Contact Us</a>
+                </div>
+                <div class="opacity-75">
+                    © 2026 Fragranzia Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

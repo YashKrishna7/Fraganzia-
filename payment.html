@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragranzia - Checkout</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-teal: #004d61;
+            --brand-teal-dark: #003442;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-dark: #1a202c;
+            --text-muted: #718096;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-dark);
+        }
+
+        /* Navbar Layout */
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--brand-teal) !important;
+            font-size: 24px;
+        }
+        .nav-link {
+            font-size: 13px;
+            font-weight: 500;
+            color: #4a5568 !important;
+        }
+        .nav-link.active {
+            color: var(--brand-teal) !important;
+            font-weight: 700;
+        }
+        .search-container {
+            position: relative;
+            width: 220px;
+        }
+        .search-container input {
+            border-radius: 20px;
+            background-color: #f1f3f5;
+            border: none;
+            font-size: 13px;
+            padding: 6px 12px 6px 36px;
+        }
+        .search-container i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8892b0;
+            font-size: 13px;
+        }
+        .nav-icon {
+            color: #2d3748;
+            font-size: 16px;
+        }
+
+        /* Generic Card Blocks */
+        .checkout-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            background: #ffffff;
+        }
+        .section-heading {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        /* Product Checkout Summary Row */
+        .product-thumb-container {
+            width: 90px;
+            height: 90px;
+            border: 1px solid #edf2f7;
+            border-radius: 6px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+        .product-thumb-img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .item-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .item-brand {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        /* Quantity Counter widget */
+        .qty-widget {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            padding: 2px;
+            background: #fff;
+        }
+        .qty-widget btn, .qty-btn {
+            background: none;
+            border: none;
+            padding: 0px 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .qty-val {
+            width: 25px;
+            text-align: center;
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .price-now {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+        }
+        .price-was {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+        .discount-badge {
+            font-size: 12px;
+            color: #38a169;
+            font-weight: 700;
+        }
+        .delivery-tagline {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+
+        /* Address Segment Controls */
+        .address-type-btn {
+            border: 1px solid var(--border-color);
+            background-color: #f8fafc;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 8px 16px;
+            color: #4a5568;
+            border-radius: 4px;
+            transition: all 0.15s ease;
+        }
+        .address-type-btn.active {
+            background-color: var(--brand-teal);
+            color: #ffffff;
+            border-color: var(--brand-teal);
+        }
+        .btn-add-address {
+            border: 1px dashed var(--brand-teal);
+            color: var(--brand-teal);
+            background: transparent;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 4px;
+        }
+        .address-display-box {
+            border: 1px solid var(--brand-teal);
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 16px;
+            background-color: #fff;
+        }
+        .address-name {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .address-details {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .address-phone {
+            font-size: 13px;
+            color: #2d3748;
+        }
+
+        /* Payment List & Table breakdowns */
+        .price-summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 12px;
+            color: #2d3748;
+        }
+        .total-amount-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 700;
+            padding-top: 14px;
+            border-top: 1px dashed var(--border-color);
+            margin-top: 14px;
+            color: #000000;
+        }
+        .payment-method-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 13px;
+        }
+        .payment-method-item:last-child {
+            border-bottom: none;
+        }
+        .payment-method-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .payment-method-label i {
+            font-size: 15px;
+            color: #4a5568;
+            width: 20px;
+            text-align: center;
+        }
+        .custom-radio {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: var(--brand-teal);
+        }
+        .btn-pay-now {
+            width: 100%;
+            background-color: var(--brand-teal);
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+        .btn-pay-now:hover {
+            background-color: var(--brand-teal-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Fragranzia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fragranziaNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="fragranziaNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gifting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <div class="search-container d-none d-md-block">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="form-control" type="search" placeholder="Search here">
+                    </div>
+                    <a href="cart.html" class="nav-icon ms-1"><i class="fa-solid fa-basket-shopping"></i></a>
+                    <a href="#" class="nav-icon"><i class="fa-regular fa-heart"></i></a>
+                    <a href="profile.html" class="nav-icon"><i class="fa-regular fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Checkout Container Frame Layout -->
+    <div class="container my-5">
+        <div class="row g-4">
+            
+            <!-- Left Panel Column: Item Specs & Recipient Addresses -->
+            <div class="col-lg-7">
+                
+                <!-- Product Overview Module -->
+                <div class="checkout-card">
+                    <div class="d-flex flex-column flex-sm-row gap-4">
+                        <div class="product-thumb-container mx-auto mx-sm-0">
+                            <!-- Referencing the referenced visual canvas container layout string verbatim -->
+                            <img src="images/d1.png" alt="Autograph Perfume" class="product-thumb-img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h3 class="item-title">Autograph eau de parfum 100ml for men</h3>
+                            <div class="item-brand">Autograph 4.5 <i class="fa-solid fa-star text-warning small"></i></div>
+                            
+                            <div class="d-flex align-items-center flex-wrap gap-3 mt-2">
+                                <div class="qty-widget">
+                                    <button class="qty-btn" onclick="let inp = this.nextElementSibling; if(inp.value > 1) inp.value--">-</button>
+                                    <input type="text" class="qty-val" value="1" readonly>
+                                    <button class="qty-btn" onclick="this.previousElementSibling.value++">+</button>
+                                </div>
+                                <div class="d-flex align-items-baseline gap-2">
+                                    <span class="price-now">Rs 899</span>
+                                    <span class="price-was">Rs 2000</span>
+                                    <span class="discount-badge">55% off</span>
+                                </div>
+                            </div>
+                            
+                            <div class="delivery-tagline">
+                                <i class="fa-solid fa-truck-fast me-1 text-muted"></i> Delivered by August 29, free delivery <br>
+                                <span class="ms-4 text-xs text-muted">7 days return policy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Information / Selection Module -->
+                <div class="checkout-card">
+                    <h3 class="section-heading">Personal Details</h3>
+                    
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                        <button class="btn btn-add-address"><i class="fa-solid fa-plus me-1"></i> Add address</button>
+                        <button class="address-type-btn active"><i class="fa-solid fa-house me-1"></i> Home</button>
+                        <button class="address-type-btn"><i class="fa-solid fa-briefcase me-1"></i> Office</button>
+                        <button class="address-type-btn"><i class="fa-solid fa-ellipsis me-1"></i> Other</button>
+                    </div>
+
+                    <div class="meta-section-title text-muted font-weight-bold mb-2" style="font-size: 13px;">Address</div>
+                    
+                    <div class="address-display-box">
+                        <div class="address-name">Rohan Jaisen</div>
+                        <div class="address-details">
+                            Apartment No: 154, Emerald Heights Opposite Lulu Mall Edappally,<br>
+                            Kochi Kerala682024
+                        </div>
+                        <div class="address-phone">
+                            <strong>+91 9876543210</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="address-name mt-3 pt-1 text-muted" style="font-size: 13.5px;">Rohan Jaisen</div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel Column: Receipt Ledger Price breakdowns & Payment Channels -->
+            <div class="col-lg-5">
+                
+                <!-- Financial Ledger Card -->
+                <div class="checkout-card">
+                    <h3 class="section-heading">Price Details</h3>
+                    
+                    <div class="price-summary-row">
+                        <span>Price (1 item)</span>
+                        <span>Rs 899 <span class="text-muted text-decoration-line-through font-weight-normal ms-1">Rs 2000</span></span>
+                    </div>
+                    <div class="price-summary-row">
+                        <span>Discount (55%)</span>
+                        <span class="text-success">- Rs 1101</span>
+                    </div>
+                    <div class="price-summary-row">
+                        <span>Delivery Charge</span>
+                        <span class="text-success">Free Delivery</span>
+                    </div>
+                    
+                    <div class="total-amount-row">
+                        <span>Total Amount</span>
+                        <span>Rs 899</span>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Selector Card -->
+                <div class="checkout-card">
+                    <h3 class="section-heading">Payment Methods</h3>
+                    
+                    <div class="payment-methods-list">
+                        
+                        <div class="payment-method-item">
+                            <label class="payment-method-label">
+                                <input type="radio" name="payment_channel" class="custom-radio" checked>
+                                <i class="fa-brands fa-google-pay text-primary" style="font-size: 18px;"></i>
+                                <span>Google Pay</span>
+                            </label>
+                        </div>
+
+                        <div class="payment-method-item">
+                            <label class="payment-method-label">
+                                <input type="radio" name="payment_channel" class="custom-radio">
+                                <i class="fa-solid fa-money-bill-wave text-success"></i>
+                                <span>Cash on delivery (cash/UPI)</span>
+                            </label>
+                        </div>
+
+                        <div class="payment-method-item">
+                            <label class="payment-method-label">
+                                <input type="radio" name="payment_channel" class="custom-radio">
+                                <i class="fa-solid fa-wallet text-warning"></i>
+                                <span>Paytm/Phone Pay/Amazon Pay etc</span>
+                            </label>
+                        </div>
+
+                        <div class="payment-method-item">
+                            <label class="payment-method-label">
+                                <input type="radio" name="payment_channel" class="custom-radio">
+                                <i class="fa-regular fa-credit-card text-danger"></i>
+                                <span>Credit/Debit card</span>
+                            </label>
+                        </div>
+
+                        <div class="payment-method-item">
+                            <label class="payment-method-label">
+                                <input type="radio" name="payment_channel" class="custom-radio">
+                                <i class="fa-solid fa-building-columns text-info"></i>
+                                <span>Net Banking</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <!-- Final Action Button Trigger -->
+                    <a href="payment success.html"><button class="btn-pay-now">Pay Now</button></a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 Javascript Bundle Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
